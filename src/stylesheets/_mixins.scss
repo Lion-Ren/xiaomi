@@ -1,0 +1,30 @@
+@mixin border-bottom($height,$color) {
+    position:relative;
+
+    &::after{
+        position: absolute;
+        display: block;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        border-top: $height solid $color;
+        content: '';
+    }
+}
+  
+  
+@mixin border-top($height,$color) {
+    position:relative;
+
+    &::after{
+    position: absolute;
+    display: block;
+    left: 0;
+    top: 0;
+    width: 100%;
+    border-top: $height solid $color;
+    content: '';
+    }
+}
+
+
