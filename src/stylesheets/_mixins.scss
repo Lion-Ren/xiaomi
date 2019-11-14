@@ -27,4 +27,18 @@
     }
 }
 
+@mixin rightrow {
+    &::after{
+        content: "";
+        position: absolute;
+        right: .16rem;
+        top: 50%;
+        width: .1rem;
+        height: .1rem;
+        border-left: 1px solid currentColor;
+        border-top: 1px solid currentColor;
+        transform: translate3d(0,-50%,0) rotate(135deg);
+        color: rgba(0,0,0,.57);
+    }
+}
 

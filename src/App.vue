@@ -3,17 +3,14 @@
     <keep-alive include="home,group,cart,mine">
       <router-view></router-view>
     </keep-alive>
-    <Tabbar></Tabbar>
   </div>
 </template>
 
 <script>
-import Tabbar from '@/components/Tabbar';
+import router from './router'
 export default {
-  components:{
-    Tabbar
-  }
-}
+
+}  
 </script>
 
 <style lang="scss">
