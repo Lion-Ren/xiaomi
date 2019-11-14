@@ -14,6 +14,7 @@ Vue.config.productionTip = false
 Vue.component("mt-tabbar",Tabbar)
 
 
+
 import Router from 'vue-router'
 
 const routerPush = Router.prototype.push

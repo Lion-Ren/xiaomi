@@ -1,18 +1,20 @@
 <template>
   <div class="item" @click="clickItem">
+      <img :src="flag?img2:img1" alt="">
       <span :class="['title', flag? 'color':'']">{{txt}}</span>
   </div>
 </template>
 
 <script>
 export default {
-    props:["txt","mark"],
+    props:["txt","mark","img1","img2","sel"],
     computed: {
         flag(){ 
             if(this.mark === this.sel){
                 return true;
+            }else{
+                return false;
             }
-            return false;
         }
     },
     methods: {
@@ -32,15 +34,17 @@ export default {
         display: flex;
         flex-direction: column;
         align-items: center;
+        margin-top:0.08rem;
         img{
-            height: 40px;
-            width: 40px;
+            height: 0.2084rem;
+            width: 0.2084rem;
+            margin-bottom:0.051112rem;
         }
         .title{
-            font-size: 12px;
+            font-size: 0.114644rem;
         }
         .color{
-            color:#42bd56;
+            color:#ff6700;
         }
     }
 </style>

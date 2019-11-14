@@ -6,6 +6,8 @@
             :key="nav.id"
             :mark="nav.mark"
             :sel="selected"
+            :img1="nav.img1"
+            :img2="nav.img2"
         >
         </Item>
     </div>
@@ -19,10 +21,10 @@ export default {
         return {
             selected:this.$route.name,
             navs:[
-                {id:1,txt:"首页",mark:"home"},
-                {id:2,txt:"分类",mark:"group"},
-                {id:3,txt:"购物车",mark:"cart"},
-                {id:4,txt:"我的",mark:"mine"},
+                {id:1,txt:"首页",mark:"home",img1:require("../../assets/xiaomi_tabbar3.png"),img2:require("../../assets/xiaomi_tabbar4.png")},
+                {id:2,txt:"分类",mark:"group",img1:require("../../assets/xiaomi_tabbar5.png"),img2:require("../../assets/xiaomi_tabbar6.png")},
+                {id:3,txt:"购物车",mark:"cart",img1:require("../../assets/xiaomi_tabbar1.png"),img2:require("../../assets/xiaomi_tabbar2.png")},
+                {id:4,txt:"我的",mark:"mine",img1:require("../../assets/xiaomi_tabbar7.png"),img2:require("../../assets/xiaomi_tabbar8.png")},
             ]
         }
     },
@@ -49,6 +51,9 @@ export default {
         display: flex;
         background: #fff;
         height: 50px;
-        background: skyblue
+        align-items: center;
+        font-size:0.114644rem;
+        color:#999;
+        box-shadow: 0 3px 14px 2px rgba(0,0,0,.12);
     }
 </style>

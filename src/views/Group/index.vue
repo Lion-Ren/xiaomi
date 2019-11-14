@@ -1,12 +1,18 @@
 <template>
   <div>
       group
+    <Tabbar></Tabbar>
+
   </div>
 </template>
 
 <script>
-export default {
+import Tabbar from '@/components/Tabbar';
 
+export default {
+  components:{
+    Tabbar
+  },
 }
 </script>
 
