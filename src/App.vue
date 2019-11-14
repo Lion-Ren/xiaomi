@@ -7,10 +7,12 @@
 </template>
 
 <script>
-import router from './router'
 export default {
-
-}  
+  
+  created(){
+      this.$router.push("/")
+  }
+}
 </script>
 
 <style lang="scss">
