@@ -9,15 +9,17 @@
         </mt-header>
         <Title></Title>
         <Goods></Goods>
+        <Tabbar></Tabbar>
     </div>
 </template>
 
 <script>
 import Title from './Title';
 import Goods from './Goods';
+import Tabbar from '@/components/Tabbar';
 export default {
     components:{
-        Title,Goods
+        Title,Goods,Tabbar
     }
 }
 
