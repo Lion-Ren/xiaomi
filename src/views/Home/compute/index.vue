@@ -15,14 +15,19 @@
 				</dl>
 			</router-link>
 		</div>
+		<Tabbar></Tabbar>
 	</div>
 </template>
 
 <script>
+import Tabbar from '@/components/Tabbar';
+
 export default {
+	components:{
+		Tabbar
+	},
    created() {
         this.$http.get("/api/xiaomi/index/computer").then(res=>{
-            console.log(res.data.data.object_list[0].data.data.sections)
             this.comp = res.data.data.object_list[0].data.data.sections
         })
 	},
@@ -36,7 +41,7 @@ export default {
 
 <style lang="scss">
 	.computer{
-		margin:0.8rem 0 0.5rem;
+		margin:0.75rem 0 0.5rem;
 	}
 	.computer_img{
 		display: flex;

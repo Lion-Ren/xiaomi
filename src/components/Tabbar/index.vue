@@ -6,6 +6,8 @@
             :key="nav.id"
             :mark="nav.mark"
             :sel="selected"
+            :img1="nav.img1"
+            :img2="nav.img2"
         >
         <p slot="activeImg" :class="nav.colorIcon"></p>
         <p slot="normalImg" :class="nav.Icon"></p>
@@ -21,10 +23,10 @@ export default {
         return {
             selected:this.$route.name,
             navs:[
-                {id:1,txt:"首页",mark:"home",colorIcon:"icon-shouye1",Icon:"icon-shouye"},
-                {id:2,txt:"分类",mark:"group",colorIcon:"icon-fenlei",Icon:"icon-fenlei3-copy1-copy"},
-                {id:3,txt:"购物车",mark:"cart",colorIcon:"icon-gouwuche-copy",Icon:"icon-gouwuche"},
-                {id:4,txt:"我的",mark:"mine",colorIcon:"icon-ren1",Icon:"icon-ren"},
+                {id:1,txt:"首页",mark:"home",img1:require("../../assets/xiaomi_tabbar3.png"),img2:require("../../assets/xiaomi_tabbar4.png")},
+                {id:2,txt:"分类",mark:"group",img1:require("../../assets/xiaomi_tabbar5.png"),img2:require("../../assets/xiaomi_tabbar6.png")},
+                {id:3,txt:"购物车",mark:"cart",img1:require("../../assets/xiaomi_tabbar1.png"),img2:require("../../assets/xiaomi_tabbar2.png")},
+                {id:4,txt:"我的",mark:"mine",img1:require("../../assets/xiaomi_tabbar7.png"),img2:require("../../assets/xiaomi_tabbar8.png")},
             ]
         }
     },
@@ -56,7 +58,10 @@ export default {
         display: flex;
         background: #fff;
         height: 50px;
-        background: skyblue;
-        z-index: 10;
+        align-items: center;
+        font-size:0.114644rem;
+        color:#999;
+        box-shadow: 0 3px 14px 2px rgba(0,0,0,.12);
+        z-index: 20;
     }
 </style>

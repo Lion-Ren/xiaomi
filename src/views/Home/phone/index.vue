@@ -213,15 +213,20 @@
                 </div>
             </div>
         </div>
+        <Tabbar></Tabbar>
     </div>
 </template>
 
 <script>
+import Tabbar from '@/components/Tabbar';
+
 import Swiper from "swiper"
 export default {
+    components:{
+        Tabbar
+    },
     created() {
         this.$http.get("/api/xiaomi/index/phone").then(res=>{
-            console.log(res.data.data.object_list[0].data.data.sections)
             this.PLT = res.data.data.object_list[0].data.data.sections
             this.$nextTick(()=>{
                 new Swiper(".phone_banner",{

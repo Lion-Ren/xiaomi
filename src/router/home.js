@@ -1,10 +1,10 @@
 export default {
-    // name:"home",
+   /*  name:"home", */
     path:"/home",
     component:()=>import("@/views/Home"),
     children:[
-        {path:"",redirect:"",name:"推荐"},
-        {path:"home",component:()=>import("@/views/Home"),name:"推荐"},
+        {path:"",redirect:"home"},
+        {path:"home",component:()=>import("@/views/Home/home"),name:"推荐"},
         {path:"phone",component:()=>import("@/views/Home/phone"),name:"手机"},
         {path:"capacity",component:()=>import("@/views/Home/capacity"),name:"智能"},
         {path:"TV",component:()=>import("@/views/Home/TV"),name:"电视"},

@@ -11,12 +11,12 @@ import 'animate.css'
 import 'swiper/css/swiper.min.css'
 import "./font_banner/iconfont.css"
 
-Vue.config.productionTip = false
 Vue.component("mt-tabbar",Tabbar)
 Vue.component("mt-header",Header)
 Vue.component("mt-button",Button)
 Vue.component("mt-search",Search)
 
+Vue.config.productionTip = false
 
 import Router from 'vue-router'
 
