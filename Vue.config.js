@@ -34,7 +34,7 @@ module.exports = {
         hotOnly: false,
         proxy: {    //通过反向代理
             "/api":{
-                target:"http://47.96.0.211:9000",
+                target:"http://47.105.105.245:8088",
                 changeOrigin:true,
                 pathRewrite:{
                     "^/api":""

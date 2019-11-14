@@ -7,6 +7,8 @@
             :mark="nav.mark"
             :sel="selected"
         >
+        <p slot="activeImg" :class="nav.colorIcon"></p>
+        <p slot="normalImg" :class="nav.Icon"></p>
         </Item>
     </div>
 </template>
@@ -19,12 +21,17 @@ export default {
         return {
             selected:this.$route.name,
             navs:[
-                {id:1,txt:"首页",mark:"home"},
-                {id:2,txt:"分类",mark:"group"},
-                {id:3,txt:"购物车",mark:"cart"},
-                {id:4,txt:"我的",mark:"mine"},
+                {id:1,txt:"首页",mark:"home",colorIcon:"icon-shouye1",Icon:"icon-shouye"},
+                {id:2,txt:"分类",mark:"group",colorIcon:"icon-fenlei",Icon:"icon-fenlei3-copy1-copy"},
+                {id:3,txt:"购物车",mark:"cart",colorIcon:"icon-gouwuche-copy",Icon:"icon-gouwuche"},
+                {id:4,txt:"我的",mark:"mine",colorIcon:"icon-ren1",Icon:"icon-ren"},
             ]
         }
+    },
+    updated() {
+        setTimeout(()=>{
+            console.log(this.$route.name)
+        },0)
     },
     components:{
         Item
@@ -43,12 +50,13 @@ export default {
     .tabbar{
         @include border-top(1px, #ccc);
         position: fixed;
-        bottom:0;
+        bottom:-1px;
         left:0;
         width: 100%;
         display: flex;
         background: #fff;
         height: 50px;
-        background: skyblue
+        background: skyblue;
+        z-index: 10;
     }
 </style>

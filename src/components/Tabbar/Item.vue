@@ -1,14 +1,17 @@
 <template>
-  <div class="item" @click="clickItem">
-      <span :class="['title', flag? 'color':'']">{{txt}}</span>
-  </div>
+    <div class="item" @click="clickItem">
+        <span v-if="flag"><slot name="activeImg"></slot></span>
+        <span v-else><slot name="normalImg"></slot></span>
+        <span :class="['title', flag? 'color':'']">{{txt}}</span>
+    </div>
 </template>
 
 <script>
 export default {
-    props:["txt","mark"],
+    props:["txt","mark","sel"],
     computed: {
         flag(){ 
+            /* console.log(this.sel) */
             if(this.mark === this.sel){
                 return true;
             }

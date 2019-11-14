@@ -12,7 +12,10 @@ import Tabbar from '@/components/Tabbar';
 export default {
   components:{
     Tabbar
-  }
+  },
+  created() {
+    this.$router.push("/")
+  },
 }
 </script>
 
