@@ -15,5 +15,8 @@ export default {
 </script>
 
 <style lang="scss">
-
+.ivu-loading-bar,.ivu-loading-bar-inner,.ivu-loading-bar-inner-color-primary{
+  background: orange;
+  color:orange;
+}
 </style>

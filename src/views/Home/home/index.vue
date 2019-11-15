@@ -13,13 +13,14 @@
 			<div class="swiper-pagination"></div>
 		</div>
 		<div class="cells_auto_fill">
-			<a 	 
-				v-for="list in list1.items"
-				:href="list.action.path"
+			<router-link 	 
+				v-for="(list,index) in list1.items"
 				:key="list.action.path"
+				:to="index==0?{name:'sec'}:''"
+        		class="sec"
 			>
 				<img v-lazy="list.img_url_webp" alt="">
-			</a>
+			</router-link>
 		</div>
 		<div class="cells_auto_fill">
 			<router-link 	 
@@ -106,7 +107,7 @@
 			</a>
 		</div>
 		<div class="divider_line index1"></div>
-		<div class="list_two_type13 box-flex">
+		<div class="list_two_type13 box-flex">~
 			<a  class="exposure item"
 				v-for="list in list9.items"
 				:href="list.action.path"
@@ -590,7 +591,7 @@ export default {
 
 </script>
 
-<style lang='scss'>
+<style lang='scss' scoped>
 	.home{
 		padding-bottom:0.5rem;
 		width:100%;
