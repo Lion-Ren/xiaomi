@@ -7,7 +7,7 @@
 					v-for="banner in banners.items"
 					:key="banner.action.path"
 				>
-					<img :src="banner.img_url_webp" alt="">
+					<img v-lazy="banner.img_url_webp" alt="">
 				</div>
 			</div>
 			<div class="swiper-pagination"></div>
@@ -18,7 +18,7 @@
 				:href="list.action.path"
 				:key="list.action.path"
 			>
-				<img :src="list.img_url_webp" alt="">
+				<img v-lazy="list.img_url_webp" alt="">
 			</a>
 		</div>
 		<div class="cells_auto_fill">
@@ -28,7 +28,7 @@
 				:key="list.action.path"
 				:to="index==1?{name:'computer'}:''"
 			>
-				<img :src="list.img_url_webp" alt="">
+				<img v-lazy="list.img_url_webp" alt="">
 			</router-link> 
 		</div>
 		<div class="divider_line"></div>
@@ -38,7 +38,7 @@
 				:href="list.action.path"
 				:key="list.action.path"
 			>
-				<img :src="list.img_url_webp" alt="">
+				<img v-lazy="list.img_url_webp" alt="">
 			</a>
 		</div>
 		<div class="divider_line"></div>
@@ -48,7 +48,7 @@
 				:href="list.action.path"
 				:key="list.action.path"
 			>
-				<img :src="list.img_url_webp" alt="">
+				<img v-lazy="list.img_url_webp" alt="">
 			</a>
 		</div>
 		<div class="divider_line"></div>
@@ -58,7 +58,7 @@
 				:href="list.action.path"
 				:key="list.action.path"
 			>
-				<img :src="list.img_url_webp" alt="">
+				<img v-lazy="list.img_url_webp" alt="">
 			</a>
 		</div>
 		<div class="divider_line index1"></div>
@@ -69,7 +69,7 @@
 				:key="list.action.path"
 			>
 				<div class="img">
-					<img class="big" :src="list.img_url_webp">
+					<img class="big" v-lazy="list.img_url_webp">
 				</div>
 				<div class="info bgw align-center">
 					<div class="name">{{list.product_name}}</div>
@@ -92,7 +92,7 @@
 				:href="list.action.path"
 				:key="list.action.path"
 			>
-				<img :src="list.img_url_webp" alt="">
+				<img v-lazy="list.img_url_webp" alt="">
 			</a>
 		</div>
 		<div class="divider_line"></div>
@@ -102,7 +102,7 @@
 				:href="list.action.path"
 				:key="list.action.path"
 			>
-				<img :src="list.img_url_webp" alt="">
+				<img v-lazy="list.img_url_webp" alt="">
 			</a>
 		</div>
 		<div class="divider_line index1"></div>
@@ -113,7 +113,7 @@
 				:key="list.action.path"
 			>
 				<div class="img">
-					<img class="big" :src="list.img_url_webp">
+					<img class="big" v-lazy="list.img_url_webp">
 				</div>
 				<div class="info bgw align-center">
 					<div class="name">{{list.product_name}}</div>
@@ -131,7 +131,7 @@
 				:key="list.action.path"
 			>
 				<div class="img">
-					<img class="big" :src="list.img_url_webp">
+					<img class="big" v-lazy="list.img_url_webp">
 				</div>
 				<div class="info bgw align-center">
 					<div class="name">{{list.product_name}}</div>
@@ -149,7 +149,7 @@
 				:key="list.action.path"
 			>
 				<div class="img">
-					<img class="big" :src="list.img_url_webp">
+					<img class="big" v-lazy="list.img_url_webp">
 				</div>
 				<div class="info bgw align-center">
 					<div class="name">{{list.product_name}}</div>
@@ -172,7 +172,7 @@
 				:href="list.action.path"
 				:key="list.action.path"
 			>
-				<img :src="list.img_url_webp" alt="">
+				<img v-lazy="list.img_url_webp" alt="">
 			</a>
 		</div>
 		<div class="divider_line"></div>
@@ -182,7 +182,7 @@
 				:href="list.action.path"
 				:key="list.action.path"
 			>
-				<img :src="list.img_url_webp" alt="">
+				<img v-lazy="list.img_url_webp" alt="">
 			</a>
 		</div>
 		<div class="divider_line index1"></div>
@@ -193,7 +193,7 @@
 				:key="list.action.path"
 			>
 				<div class="img">
-					<img class="big" :src="list.img_url_webp">
+					<img class="big" v-lazy="list.img_url_webp">
 				</div>
 				<div class="info bgw align-center">
 					<div class="name">{{list.product_name}}</div>
@@ -211,7 +211,7 @@
 				:key="list.action.path"
 			>
 				<div class="img">
-					<img class="big" :src="list.img_url_webp">
+					<img class="big" v-lazy="list.img_url_webp">
 				</div>
 				<div class="info bgw align-center">
 					<div class="name">{{list.product_name}}</div>
@@ -229,7 +229,7 @@
 				:key="list.action.path"
 			>
 				<div class="img">
-					<img class="big" :src="list.img_url_webp">
+					<img class="big" v-lazy="list.img_url_webp">
 				</div>
 				<div class="info bgw align-center">
 					<div class="name">{{list.product_name}}</div>
@@ -252,7 +252,7 @@
 				:href="list.action.path"
 				:key="list.action.path"
 			>
-				<img :src="list.img_url_webp" alt="">
+				<img v-lazy="list.img_url_webp" alt="">
 			</a>
 		</div>
 		<div class="divider_line"></div>
@@ -262,7 +262,7 @@
 				:href="list.action.path"
 				:key="list.action.path"
 			>
-				<img :src="list.img_url_webp" alt="">
+				<img v-lazy="list.img_url_webp" alt="">
 			</a>
 		</div>
 		<div class="divider_line index1"></div>
@@ -274,7 +274,7 @@
 				:key="list.action.path"
 			>
 				<div class="img">
-					<img :src="list.img_url_webp" alt="" class="big">
+					<img v-lazy="list.img_url_webp" alt="" class="big">
 				</div>
 				<div class="info">
 					<div class="name">{{list.product_name}}</div>
@@ -291,7 +291,7 @@
 				:key="list.action.path"
 			>
 				<div class="img">
-					<img :src="list.img_url_webp" alt="" class="big">
+					<img v-lazy="list.img_url_webp" alt="" class="big">
 				</div>
 				<div class="info">
 					<div class="name">{{list.product_name}}</div>
@@ -308,7 +308,7 @@
 				:key="list.action.path"
 			>
 				<div class="img">
-					<img :src="list.img_url_webp" alt="" class="big">
+					<img v-lazy="list.img_url_webp" alt="" class="big">
 				</div>
 				<div class="info">
 					<div class="name">{{list.product_name}}</div>
@@ -330,7 +330,7 @@
 				:href="list.action.path"
 				:key="list.action.path"
 			>
-				<img :src="list.img_url_webp" alt="">
+				<img v-lazy="list.img_url_webp" alt="">
 			</a>
 		</div>
 		<div class="divider_line"></div>
@@ -340,7 +340,7 @@
 				:href="list.action.path"
 				:key="list.action.path"
 			>
-				<img :src="list.img_url_webp" alt="">
+				<img v-lazy="list.img_url_webp" alt="">
 			</a>
 		</div>
 		<div class="list_two_type2">
@@ -351,7 +351,7 @@
 				:key="list.action.path"
 			>
 				<div class="img">
-					<img :src="list.img_url" alt="" class="big">
+					<img v-lazy="list.img_url" alt="" class="big">
 				</div>
 				<div class="info">
 					<div class="name">{{list.product_name}}</div>
@@ -373,7 +373,7 @@
 					<div class="price">￥{{list.product_price}}<span class="price old" v-if="list.product_price==list.product_org_price?false:true">￥<s>{{list.product_org_price}}</s></span></div>
 				</div>
 				<div class="img">
-					<img :src="list.img_url" alt="" class="big">
+					<img v-lazy="list.img_url" alt="" class="big">
 				</div>
 			</a>
 		</div>
@@ -385,7 +385,7 @@
 				:key="list.action.path"
 			>
 				<div class="img">
-					<img :src="list.img_url" alt="" class="big">
+					<img v-lazy="list.img_url" alt="" class="big">
 				</div>
 				<div class="info">
 					<div class="name">{{list.product_name}}</div>
@@ -406,7 +406,7 @@
 				:href="list.action.path"
 				:key="list.action.path"
 			>
-				<img :src="list.img_url" alt="">
+				<img v-lazy="list.img_url" alt="">
 			</a>
 		</div>
 		<div class="divider_line" style="height: 0.02rem;border-bottom: 0.02rem solid rgb(245, 245, 245);background-color: rgb(245, 245, 245);">
@@ -417,7 +417,7 @@
 				:href="list.action.path"
 				:key="list.action.path"
 			>
-				<img :src="list.img_url" alt="">
+				<img v-lazy="list.img_url" alt="">
 			</a>
 		</div>
 		<div class="divider_line" style="height: 0.02rem;border-bottom: 0.02rem solid rgb(245, 245, 245);background-color: rgb(245, 245, 245);">
@@ -428,7 +428,7 @@
 				:href="list.action.path"
 				:key="list.action.path"
 			>
-				<img :src="list.img_url" alt="">
+				<img v-lazy="list.img_url" alt="">
 			</a>
 		</div>
 		<div class="divider_line">
@@ -439,7 +439,7 @@
 				:href="list.action.path"
 				:key="list.action.path"
 			>
-				<img :src="list.img_url_webp" alt="">
+				<img v-lazy="list.img_url_webp" alt="">
 			</a>
 		</div>
 		<div class="cells_auto_fill cell2" style="height:0.5524rem;">
@@ -448,10 +448,10 @@
 				:href="list.action.path"
 				:key="list.action.path"
 			>
-				<img :src="list.img_url_webp" alt="" style="height:0.5524rem;">
+				<img v-lazy="list.img_url_webp" alt="" style="height:0.5524rem;">
 			</a>
 		</div>
-		<div data-v-0677858e="" class="fixed-br" style=""><a><img src="//cdn.cnbj1.fds.api.mi-img.com/mi-mall/a5bd951d960c0ad6ea2c54770edfb2ff.gif"></a><a id="top" style="visibility: visible;" @click="fn"><img src="https://m.mi.com/static/img/top.451d650ecd.png"></a><div class="safe-area-inset" style="background: transparent;"></div></div>
+		<div data-v-0677858e="" class="fixed-br" style="" v-if="isFixed"><a><img src="//cdn.cnbj1.fds.api.mi-img.com/mi-mall/a5bd951d960c0ad6ea2c54770edfb2ff.gif"></a><a id="top" style="visibility: visible;" @click="fn"><img src="https://m.mi.com/static/img/top.451d650ecd.png"></a><div class="safe-area-inset" style="background: transparent;"></div></div>
     	<Tabbar></Tabbar>
 	</div>
 </template>
@@ -499,6 +499,7 @@ export default {
 			list29:[],
 			list30:[],
 			list31:[],
+			isFixed:false
         }
     },
     methods:{
@@ -511,7 +512,15 @@ export default {
 		},
 		fn(){
 			window.scrollTo(0,0);
-		}
+		},
+		listenScroll(){
+            let sTop=document.documentElement.scrollTop || document.body.scrollTop;
+            if(sTop >= 300){
+                this.isFixed = true;
+            }else if(sTop  <= 300){
+                this.isFixed = false;
+            }
+        }
     },
     created(){
         this.$http.get("/api/xiaomi/index").then(res=>{
@@ -566,8 +575,17 @@ export default {
             })
 		});
 		window.addEventListener("beforeunload", this.fn);
+        window.addEventListener("scroll",this.listenScroll)
+
 		
-	}
+	},
+	beforeRouteLeave (to, from, next) {
+        this.scrollTop=document.documentElement.scrollTop || document.body.scrollTop;
+        next()
+    },
+    beforeDestroy(){
+        window.removeEventListener("scroll",this.listenScroll)
+    }
 }
 
 </script>

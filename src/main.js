@@ -2,7 +2,7 @@ import Vue from 'vue'
 import App from './App.vue'
 import router from './router'
 import store from './store'
-import {Tabbar,Header,Button,Search } from 'mint-ui'
+import {Tabbar,Header,Button,Search,Lazyload} from 'mint-ui'
 import './stylesheets/main.scss'
 import './modules/rem'
 import axios from 'axios'
@@ -15,6 +15,8 @@ Vue.component("mt-tabbar",Tabbar)
 Vue.component("mt-header",Header)
 Vue.component("mt-button",Button)
 Vue.component("mt-search",Search)
+Vue.use(Lazyload);
+
 
 Vue.config.productionTip = false
 
