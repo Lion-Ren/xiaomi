@@ -67,6 +67,15 @@ export default {
             this.goods = res.data
         })
     },
+    methods:{
+        ...mapActions(["addGoodInCar","reduceGoodInCar"])
+    },
+    computed:{
+        ...mapState({
+            goods:state=>state.myCar.cars
+        }),
+        ...mapGetters(["computeTotal"])
+    }
 }
 </script>
 
