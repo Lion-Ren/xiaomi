@@ -109,6 +109,7 @@ export default {
     },
     computed:{
         ...mapState({
+
             lists:state=>state.myCar.cars,
         }),
         ...mapGetters(["computeTotal"])
