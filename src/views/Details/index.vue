@@ -1,6 +1,6 @@
 <template>
     <div class="nex">
-        <mt-header  style="background: rgba(0,0,0,0)">
+        <mt-header class="bbbooo"  style="background: rgba(0,0,0,0)">
             <div slot="left" @click="goBack" >
                 <mt-button icon="back" style="background: rgba(0,0,0,0.3)"></mt-button>
             </div>
@@ -100,6 +100,13 @@ export default {
 </script>
 
 <style lang="scss">
+.bbbooo{
+    z-index: 10;
+    position: fixed;
+    top:0;
+    left:0;
+    right:0;
+}
     .mint-button{
         border-radius: 50%;
         width:0.3rem;
@@ -132,7 +139,7 @@ export default {
         top:-0.5rem;
         left:0 ;
         right:0;
-        z-index: -1;
+        z-index: 1;
     }
     .lllldiv{
         padding-top:0.1rem;
@@ -158,6 +165,7 @@ export default {
         display: flex;
         justify-content:center;
         align-items: center;
+        z-index: 10;
         button{
             width:2rem;
             height:0.4rem;
@@ -169,7 +177,5 @@ export default {
             background: #ff6700;
         }
     }
-    .nex{
-        margin-bottom:0.1rem;
-    }
+
 </style>

@@ -32,7 +32,7 @@ export default {
         setTimeout(() => {
             var cars = getCar(); 
             cars = cars.filter(item=>{
-                if(item.CommodityId === good.CommodityId){
+                if(item.action.path === good.action.path){
                     item.num--
                     if(item.num<=0) return false; //将此商品直接过滤掉了（从数组里面移除掉了）
                 }

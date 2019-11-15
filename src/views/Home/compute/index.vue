@@ -66,7 +66,6 @@ export default {
 		border-radius: 5px;
 	}
 	.margin{
-		
 		margin-left:0.1rem;
 	}
 	.padding{
