@@ -7,12 +7,38 @@
                     <em>{{em1}}</em>
                 </p>
             </div>
-            <div class="nogoods">
+            <div class="nogoods" v-if="computeTotal.num==0">
                 <p class="gogoods">
                     <span>{{span2}}</span>
                     <router-link to="/" class="em">{{em2}}</router-link>
                 </p>
             </div>
+
+
+           <div class="top" >
+                <mt-cell 
+                    :title="list.name"
+                    v-for="(list,index) in lists"
+                    :key="index"
+                    class="mtcell"
+                >
+                    <div class="button">
+                        <span @click="reduceGoodInCar(list)">-</span>
+                        <P>{{list.num}}</P>
+                        <span @click="addGoodInCar(list)">+</span>
+                    </div>
+
+                    <img slot="icon" :src="list.image_url" width="40" height="40">
+
+                    <div class="money">
+                        售价:{{list.market_price}}
+                    </div>
+                <!-- <p class="p">￥{{computeTotal.price}}</p> -->
+
+                </mt-cell>
+            </div>
+
+        
             <div class="goods-box">
                 <div class="top-img">
                     <img :src="img" alt="">
@@ -27,6 +53,7 @@
                             to=""
                             tag="a"
                         >
+                        <p ><img @click="addGoodInCar(good)" src="../../assets/xiaomi_tabbar1.png" alt=""></p>
                             <div class="itemimg">
                                 <img :src="good.image_url" alt="">
                             </div>
@@ -46,11 +73,19 @@
                 </div>
             </div>
         </div>
+        <div class="bottom" v-if="computeTotal.num!=0">
+            <aside>
+                <p>共{{computeTotal.num}}件  金额：</p>
+                <p class="p">￥{{computeTotal.price}}</p>
+            </aside>
+            <div>继续购物</div>
+            <nav>去结算</nav>
+        </div>
     </div>
 </template>
 
 <script>
-
+import {mapState,mapActions,mapGetters} from "vuex"
 export default {
     data(){
         return {
@@ -65,8 +100,20 @@ export default {
     created() {
         this.$http.get("/api/cart.json").then(res=>{
             this.goods = res.data
+            console.log(this.goods)
+            console.log(this.lists)
         })
     },
+    methods:{
+        ...mapActions(["addGoodInCar","reduceGoodInCar"])
+    },
+    computed:{
+        ...mapState({
+
+            lists:state=>state.myCar.cars,
+        }),
+        ...mapGetters(["computeTotal"])
+    }
 }
 </script>
 
@@ -84,6 +131,7 @@ export default {
                 background: #fff;
                 text-align: left;
                 padding-bottom: .45rem;
+                
                 .goodslist{
                     display: flex;
                     flex: 1;
@@ -95,6 +143,16 @@ export default {
                     .itembox{
                         flex: 0 1 49.5%;
                         overflow: hidden;
+                        position: relative;
+                        p{
+                            position: absolute;
+                            bottom:13px;
+                            right:13px;
+                            img{
+                                width: 15px;
+                                height: 15px;
+                            }
+                        }
                         a{
                             display: block;
                             outline: 0;
@@ -226,4 +284,96 @@ export default {
             height: .08rem;
         }
     }
+    .mint-cell-wrapper {
+         width: 3.75rem;
+            height: 1.18rem;
+            position: relative;
+    }
+    .top{
+        .mtcell{
+            width: 3.75rem;
+            height: 1.18rem;
+            position: relative;
+            img{
+                width: 0.91rem;
+                height: 0.91rem;
+                position: absolute;
+                margin-left: 0.06rem;
+                margin-top: -0.33rem;
+                z-index: 100;
+            }
+            
+            .button{
+                width: 0.93rem;
+                height: 0.31rem;
+                display: flex;
+                border:1px solid #ccc;
+                position: relative;
+                top:0.3rem;
+                left:-1.38rem;
+                span,p{
+                    display: block;
+                    width: 0.93rem;
+                    height: 0.31rem;
+                    text-align: center;
+                    line-height: 0.29rem;
+                }
+                span{
+                    background: #f0e9e9;
+                    opacity: 0.6;
+                }
+            }
+            .mint-cell-text{
+                font-size: 13px;
+                position: relative;
+                left: 1.24rem;
+                top:-0.24rem;
+            }
+            .money{
+                font-size: 12px;
+                position: absolute;
+                left: 1.34rem;
+                top:0.52rem;
+            }
+        }
+    }
+    .bottom{
+        width: 100%;
+        height: 0.4974rem;
+        background:white;
+        position: fixed;
+        bottom: 0;
+        z-index: 1000;
+        display: flex;
+        aside{
+            width: 33%;
+            height: 100%;
+            // background: red;
+            p{
+                padding-left: 0.15rem;
+            }
+            .p{
+                color:orange;
+                font-size: 18px;
+                font-weight: 900;
+                padding-left: 0.03rem;
+            }
+        }
+        div{
+            background: #f4f4f4;
+            text-align: center;
+            width: 33%;
+            line-height: 0.497rem;
+            font-size: 15px;
+        }
+        nav{
+          text-align: center;
+            width: 33%;
+            line-height: 0.497rem;  
+            background: #ff6700;
+            color:white;
+            font-size: 15px;
+        }
+    }
+    
 </style>
