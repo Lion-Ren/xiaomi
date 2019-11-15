@@ -31,12 +31,12 @@
                 </div>
                 <!-- 第一页 -->
                 <div class="list" v-if="this.type=='in_theaters'">
-                    <div class="timer" v-if="Date.now()<=1573711200000">
+                    <div class="timer" v-if="Date.now()<=1573884000000">
                         <span>即将开始的秒杀</span>
                         <aside>距开始：</aside>
                         <p>{{timerone1 | filterTimerone1(":")}}</p>
                     </div>
-                    <div class="timer" v-if="Date.now()>=1573711200000">
+                    <div class="timer" v-if="Date.now()>=1573884000000">
                         <span>抢购中 &ensp;先到先得哟</span>
                         <aside>距结束：</aside>
                         <p>{{timerone2 | filterTimerone2(":")}}</p>
@@ -67,7 +67,7 @@
                             class="maxtimer"
                             tag="div"
                             to="/home"
-                            v-if="Date.now()>=1573711200000"
+                            v-if="Date.now()>=1573884000000"
                             >
                                 <p>登录后抢购</p>
                             </router-link>
@@ -83,12 +83,12 @@
                 </div>
                 <!-- 第二页 -->
                 <div class="list" v-if="this.type=='coming_soon'">
-                    <div class="timer" v-if="Date.now()<=1573732800000">
+                    <div class="timer" v-if="Date.now()<=1573905600000">
                         <span>即将开始的秒杀</span>
                         <aside>距开始：</aside>
                         <p>{{timertwo1 | filterTimertwo1(":")}}</p>
                     </div>
-                    <div class="timer" v-if="Date.now()>=1573732800000 && Date.now()<=1573738920000">
+                    <div class="timer" v-if="Date.now()>=1573905600000 && Date.now()<=1573911720">
                         <span>抢购中 &ensp;先到先得哟</span>
                         <aside>距结束：</aside>
                         <p>{{timertwo2 | filterTimertwo2(":")}}</p>
@@ -119,13 +119,13 @@
                             class="maxtimer"
                             tag="div"
                             to="/home"
-                            v-if="Date.now()>=1573732800000"
+                            v-if="Date.now()>=1573905600000"
                             >
                                 <p>登录后抢购</p>
                             </router-link>
                             <div 
                             class="mintimer"
-                            v-if="Date.now()<=1573738920000 && Date.now()<=1573732800000"
+                            v-if="Date.now()<=1573911720000 && Date.now()<=1573905600000"
                             >   
                                 <p @click="datil.isBtn=!datil.isBtn;isButton1()" v-if="datil.isBtn">提醒我</p>
                                 <span @click="datil.isBtn=!datil.isBtn" v-else>取消提醒</span>
@@ -135,13 +135,13 @@
                 </div>
                 <!-- 第三页 -->
                 <div class="list" v-if="this.type=='coming_soon1'">
-                    <div class="timer" v-if="Date.now()<=1573740000000">
+                    <div class="timer" v-if="Date.now()<=1573912800000">
                         <span>即将开始的秒杀</span>
                         <aside>距开始：</aside>
                         <p>{{timerthree1 | filterTimerthree1(":")}}</p>
                     </div>
                     <div class="timer" 
-                    v-if="Date.now()>=1573740000000 && Date.now()<=1573746120000"
+                    v-if="Date.now()>=1573912800 && Date.now()<=1573918920000"
                     >
                         <span>抢购中 &ensp;先到先得哟</span>
                         <aside>距结束：</aside>
@@ -173,7 +173,7 @@
                             class="maxtimer"
                             tag="div"
                             to="/home"
-                            v-if="Date.now()>=1573740000000"
+                            v-if="Date.now()>=1573912800000"
                             >
                                 <p>登录后抢购</p>
                             </router-link>
@@ -200,12 +200,12 @@ export default {
     data() {
         return {
             // isButton:true,
-            timerone1:Math.abs(Date.now()-1573711200000)-28800000,
-            timerone2:Math.abs(Date.now()-1573731720000)-28800000,
-            timertwo1:Math.abs(Date.now()-1573732800000)-28800000,
-            timertwo2:Math.abs(Date.now()-1573738920000)-28800000,
-            timerthree1:Math.abs(Date.now()-1573740000000)-28800000,
-            timerthree2:Math.abs(Date.now()-1573746120000)-28800000,
+            timerone1:Math.abs(Date.now()-1573884000000)-28800000,
+            timerone2:Math.abs(Date.now()-1573904520000)-28800000,
+            timertwo1:Math.abs(Date.now()-1573905600000)-28800000,
+            timertwo2:Math.abs(Date.now()-1573911720000)-28800000,
+            timerthree1:Math.abs(Date.now()-1573912800000)-28800000,
+            timerthree2:Math.abs(Date.now()-1573918920000)-28800000,
             type:"in_theaters",
             datils1:[],
             datils2:[],
@@ -257,12 +257,12 @@ export default {
     created(){
         // console.log(this.timerone)
         setInterval(()=>{
-            this.timerone1 =Math.abs(Date.now()-1573711200000)-28800000
-            this.timerone2 =Math.abs(Date.now()-1573731720000)-28800000
-            this.timertwo1 =Math.abs(Date.now()-1573732800000)-28800000
-            this.timertwo2 =Math.abs(Date.now()-1573738920000)-28800000
-            this.timerthree1 =Math.abs(Date.now()-1573740000000)-28800000
-            this.timerthree2 =Math.abs(Date.now()-1573746120000)-28800000
+            this.timerone1 =Math.abs(Date.now()-1573884000000)-28800000
+            this.timerone2 =Math.abs(Date.now()-1573904520000)-28800000
+            this.timertwo1 =Math.abs(Date.now()-1573905600000)-28800000
+            this.timertwo2 =Math.abs(Date.now()-1573911720000)-28800000
+            this.timerthree1 =Math.abs(Date.now()-1573912800000)-28800000
+            this.timerthree2 =Math.abs(Date.now()-1573918920000)-28800000
         },1000)
         // console.log(Date.now())
         this.$http.get("/api/xiaomi/index/sec",{
@@ -290,6 +290,10 @@ export default {
                 }
             }
         }
+        .active {
+    border-bottom: none;
+    color: #ed5b00;
+}
         .mintui-back:before{
             font-size: 0.21rem;
         }

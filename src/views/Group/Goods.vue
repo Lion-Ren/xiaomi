@@ -950,7 +950,7 @@ export default {
             .then(res=>{
                 // console.log(res.data)
                 // console.log(res.data.data)
-                console.log(res.data.data.object_list[0].data)
+                // console.log(res.data.data.object_list[0].data)
                 let data = res.data.data.object_list[0].data;
                 // 新品数据
                 this.xinpin_bigImgs = data[0].category_list[0].body.items;

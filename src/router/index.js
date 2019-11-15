@@ -5,6 +5,9 @@ import group from './group';
 import cart from './cart';
 import sec from "./sec"
 import mine from './mine';
+import details from './details';
+import search from './search';
+import computer from './computer'
 
 Vue.use(VueRouter)
 
@@ -12,7 +15,7 @@ Vue.use(VueRouter)
 const router = new VueRouter({
   routes:[
     {path:"/",redirect:"/home"},
-    home,group,cart,mine,sec
+    home,group,cart,mine,search,computer,details,sec
   ]
 })
 

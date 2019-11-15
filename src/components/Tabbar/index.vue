@@ -9,6 +9,8 @@
             :img1="nav.img1"
             :img2="nav.img2"
         >
+        <p slot="activeImg" :class="nav.colorIcon"></p>
+        <p slot="normalImg" :class="nav.Icon"></p>
         </Item>
     </div>
 </template>
@@ -28,6 +30,11 @@ export default {
             ]
         }
     },
+    updated() {
+        setTimeout(()=>{
+            console.log(this.$route.name)
+        },0)
+    },
     components:{
         Item
     },
@@ -45,7 +52,7 @@ export default {
     .tabbar{
         @include border-top(1px, #ccc);
         position: fixed;
-        bottom:0;
+        bottom:-1px;
         left:0;
         width: 100%;
         display: flex;
@@ -55,5 +62,6 @@ export default {
         font-size:0.114644rem;
         color:#999;
         box-shadow: 0 3px 14px 2px rgba(0,0,0,.12);
+        z-index: 20;
     }
 </style>

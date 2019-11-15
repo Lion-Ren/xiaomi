@@ -1,21 +1,18 @@
 <template>
-  <div>
-      cart
-    <Tabbar></Tabbar>
-
-  </div>
+	<div class="cart">
+		<CartHeader></CartHeader>
+		<CartContent></CartContent>
+		<Tabbar></Tabbar> 
+	</div>
 </template>
 
 <script>
-import Tabbar from '@/components/Tabbar';
-
+import Tabbar from '@/components/Tabbar'
+import CartHeader from './CartHeader'
+import CartContent from './CartContent'
 export default {
-  components:{
-    Tabbar
-  },
+	components:{
+	Tabbar,CartHeader,CartContent
+	}
 }
 </script>
-
-<style>
-
-</style>

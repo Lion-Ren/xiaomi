@@ -10,6 +10,7 @@ export default {
     props:["txt","mark","img1","img2","sel"],
     computed: {
         flag(){ 
+            /* console.log(this.sel) */
             if(this.mark === this.sel){
                 return true;
             }else{
