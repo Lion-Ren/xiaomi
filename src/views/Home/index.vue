@@ -12,13 +12,15 @@
 			<div class="swiper-pagination"></div>
 		</div>
 		<div class="cells_auto_fill">
-			<a 	 
+			<router-link 	 
 				v-for="list in list1.items"
-				:href="list.action.path"
+				tag="a"
+        		to="/sec"
+        		class="sec"
 				:key="list.action.path"
 			>
 				<img :src="list.img_url_webp" alt="">
-			</a>
+			</router-link>
 		</div>
 		<div class="cells_auto_fill">
 			<a 	 
