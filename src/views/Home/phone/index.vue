@@ -2,7 +2,7 @@
     <div class="phone">
         <div class="fa fa-spinner fa-pulse lodiing" v-if="!PLT">
         </div>
-        <div v-else>
+        <router-link :to="{name:'details'}" v-else>
             <div class="phone_img1">
                 <img :src="PLT[0].body.items[0].img_url" alt="">
             </div>
@@ -212,7 +212,7 @@
                     <img :src="PLT[46].body.items[1].img_url" alt="">
                 </div>
             </div>
-        </div>
+        </router-link>
         <Tabbar></Tabbar>
     </div>
 </template>

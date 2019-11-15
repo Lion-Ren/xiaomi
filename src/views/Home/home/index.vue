@@ -1,6 +1,5 @@
 <template>
-	<div class="home" style="margin-top:0.82rem;">
-		
+	<router-link :to="{name:'details'}" class="home" style="margin-top:0.82rem;">
 		<div class="home-banner swiper-container">
 			<div class="swiper-wrapper">
 				<div class="swiper-slide"
@@ -453,7 +452,7 @@
 		</div>
 		<div data-v-0677858e="" class="fixed-br" style=""><a><img src="//cdn.cnbj1.fds.api.mi-img.com/mi-mall/a5bd951d960c0ad6ea2c54770edfb2ff.gif"></a><a id="top" style="visibility: visible;" @click="fn"><img src="https://m.mi.com/static/img/top.451d650ecd.png"></a><div class="safe-area-inset" style="background: transparent;"></div></div>
     	<Tabbar></Tabbar>
-	</div>
+	</router-link>
 </template>
 
 <script>
