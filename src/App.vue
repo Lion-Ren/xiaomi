@@ -7,9 +7,15 @@
 </template>
 
 <script>
+import {mapActions} from "vuex"
 export default {
   created(){
-      this.$router.push("/")
+    this.$router.push("/")
+    // this.$store.dispatch("initCars")
+    this.initCars()
+  },
+  methods:{
+    ...mapActions(["initCars"])
   }
 }
 </script>
