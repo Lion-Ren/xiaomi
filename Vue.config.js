@@ -1,8 +1,8 @@
 module.exports = {
     // 基本路径
-    publicPath: './',
+    publicPath: '/xiaomi',
     // 输出文件目录
-    outputDir: 'xiaomi',
+    outputDir: 'dist',
     // eslint-loader 是否在保存的时候检查
     //lintOnSave: true,
     // webpack配置

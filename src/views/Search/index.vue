@@ -63,10 +63,10 @@ export default {
         }
     },
 	created() {
-		this.$http.get("/api/cartkeys.json").then(res=>{
+		this.$http.get("./api/cartkeys.json").then(res=>{
 			this.keys = res.data
 		})
-		this.$http.get("/api/cartitem.json").then(res=>{
+		this.$http.get("./api/cartitem.json").then(res=>{
 			this.items = res.data
 		})
 	},

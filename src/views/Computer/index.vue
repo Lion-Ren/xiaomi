@@ -143,7 +143,7 @@ export default {
         }
     },
     created() {
-        this.$http.get("/api/computer.json").then(res=>{
+        this.$http.get("./api/computer.json").then(res=>{
             // this.goods = res.data
             // console.log(res.data[0].data.sections[10])
             this.twos = res.data[0].data.sections[8].body.items

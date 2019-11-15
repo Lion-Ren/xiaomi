@@ -98,10 +98,8 @@ export default {
         }
     },
     created() {
-        this.$http.get("/api/cart.json").then(res=>{
+        this.$http.get("./api/cart.json").then(res=>{
             this.goods = res.data
-            console.log(this.goods)
-            console.log(this.lists)
         })
     },
     methods:{

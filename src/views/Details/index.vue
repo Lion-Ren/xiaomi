@@ -50,7 +50,7 @@ export default {
         }
     },
     created() {
-        this.$http.get("/进阶版.json").then(res=>{
+        this.$http.get("./update.json").then(res=>{
             console.log(res.data)
             this.ImgData = res.data.data.goods_share_datas.gallery_view
             this.seo = res.data.data.seo
